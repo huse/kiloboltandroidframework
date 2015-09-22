@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+    defaultConfig {
+        applicationId "com.jamescho.androidgame"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    /*  sourceSets {
+          main.java.srcDirs += 'src/main/<YOUR DIRECTORY>'
+          C:\Users\a09348\AndroidStudioProjects\kiloboltandroidframework2\app\src\main
+
+
+      }*/
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.google.android.gms:play-services-ads:7.3.0'
+    compile 'com.android.support:support-v4:23.0.1'
+}
